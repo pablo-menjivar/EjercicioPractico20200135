@@ -25,6 +25,7 @@ const Dashboard = () => {
     deleteRecipe,
     setRecipes
   } = useRecipes()
+  // Efecto para manejar la carga de recetas al montar el componente
   useEffect(() => {
     fetchRecipes()
   }, [])
