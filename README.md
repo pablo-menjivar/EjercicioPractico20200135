@@ -89,3 +89,9 @@ A partir de React 17, se introdujo el **nuevo JSX Transform** que permite escrib
 7. **Persistencia**: Los datos se guardan en una API externa
 
 ¡Disfruta organizando tus recetas favoritas! 👨‍🍳👩‍🍳
+
+---
+
+# EXTRA: ENLACE A VIDEO DE DEMOSTRACIÓN DE FUNCIONAMIENTO DE LA APLICACIÓN
+
+[Aquí](https://youtu.be/NPoWxT-KSTQ)
