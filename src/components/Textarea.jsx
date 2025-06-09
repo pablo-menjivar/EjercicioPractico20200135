@@ -1,16 +1,6 @@
-import React from 'react';
-
-const Textarea = ({ 
-  label, 
-  name, 
-  register, 
-  validation, 
-  error,
-  placeholder = '',
-  icon: Icon,
-  className = '',
-  required = false
-}) => {
+// Este input contiene un campo de texto para el usuario a ingresar datos, se llama textarea
+// y se utiliza para ingresar texto largo como parrafos.
+const Textarea = ({ label, name, register, validation, error,placeholder = '', icon: Icon,className = '', required = false }) => {
   return (
     <div className={`mb-4 ${className}`}>
       {label && (
@@ -24,20 +14,14 @@ const Textarea = ({
             <Icon size={18} />
           </div>
         )}
-        <textarea
-          {...register(name, validation)}
-          placeholder={placeholder}
-          rows={4}
-          className={`w-full px-4 py-2 border ${
+        <textarea {...register(name, validation)} placeholder={placeholder} rows={4} className={`w-full px-4 py-2 border ${
             error ? 'border-red-500' : 'border-gray-300'
-          } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${Icon ? 'pl-10' : ''}`}
-        />
+          } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${Icon ? 'pl-10' : ''}`}/>
       </div>
       {error && (
         <p className="mt-1 text-sm text-red-500">{error.message}</p>
       )}
     </div>
-  );
-};
-
-export default Textarea;
+  )
+}
+export default Textarea

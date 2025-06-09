@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast'
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Se configura el estilo del toaster que se crea al realizar una accion dentro de la aplicacion */}
       <Toaster 
         position="top-right"
         toastOptions={{
@@ -16,8 +17,7 @@ function App() {
             borderRadius: '12px',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
           }
-        }}
-      />
+        }}/>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/dashboard" element={<Dashboard />} />

@@ -1,15 +1,5 @@
-const Input = ({ 
-  label, 
-  name, 
-  type = 'text',
-  register,
-  validation,
-  error,
-  placeholder = '',
-  icon: Icon,
-  className = '',
-  required = false
-}) => {
+// Este input contiene un campo de texto para el usuario a ingresar datos
+const Input = ({ label, name, type = 'text', register, validation, error, placeholder = '', icon: Icon, className = '', required = false }) => {
   return (
     <div className={`mb-4 ${className}`}>
       {label && (
@@ -23,20 +13,16 @@ const Input = ({
             <Icon size={18} />
           </div>
         )}
-        <input
-          type={type}
-          {...register(name, validation)}
-          placeholder={placeholder}
+        {/* ...register */}
+        <input type={type} {...register(name, validation)} placeholder={placeholder}
           className={`w-full px-4 py-2 border ${
             error ? 'border-red-500' : 'border-gray-300'
-          } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${Icon ? 'pl-10' : ''}`}
-        />
+          } rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${Icon ? 'pl-10' : ''}`}/>
       </div>
       {error && (
         <p className="mt-1 text-sm text-red-500">{error.message}</p>
       )}
     </div>
-  );
-};
-
-export default Input;
+  )
+}
+export default Input

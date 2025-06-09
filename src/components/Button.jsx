@@ -1,3 +1,5 @@
+// Este boton contiene un clase base de estilos y un conjunto de variantes que se utilizan en otras interfaces para
+// darle un aspecto visual unico a cada boton. Ademas, se puede personalizar el boton con una clase personalizada
 const Button = ({ children, onClick, variant = 'primary', icon: Icon, className = '' }) => {
   const baseClasses = "font-medium py-2 px-4 rounded-lg transition-all flex items-center justify-center gap-2"
   const variants = {
